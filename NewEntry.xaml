@@ -1,0 +1,29 @@
+﻿<Window x:Class="Remindery.NewEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Remindery"
+        mc:Ignorable="d"
+        Title="NewEntry" Height="244.495" Width="300">
+    <!--<local:NewEntryViewModel/>-->
+    <!--<local:Remindery />-->
+    <!--<local:ReminderyModel /> - cmds as well as data are bound here -->
+    <!--<Window.DataContext>
+        <local:ReminderyViewModel />
+    </Window.DataContext>-->
+    <Grid Margin="0,1,0,-1">
+        <Label Content="Next Due" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="FldWhenDue" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" />
+        <Label Content="Frequency" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="FldFrequency" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="FldPeriod" HorizontalAlignment="Right" Margin="0,72,43,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="FldQty" HorizontalAlignment="Right" Height="23" Margin="0,72,10,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="28" TextAlignment="Right"/>
+        <Label Content="Comment:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="FldComment" Margin="10,130,10,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top"
+                 Text="{Binding Comment, Mode=TwoWay}"
+                 />
+        <Button x:Name="BtnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnExit" Content="OK" HorizontalAlignment="Right" Margin="0,158,10,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
